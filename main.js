@@ -32,5 +32,5 @@ class Counter extends React.Component {
         </div>
     }
 }
-
+//qwertyyui
 ReactDOM.render(<Counter />, document.getElementById('counter'))
