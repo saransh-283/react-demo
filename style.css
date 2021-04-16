@@ -9,3 +9,14 @@ body {
 .btn {
     margin-right: 10px;
 }
+
+#bulb-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.bulb-false {
+    background: black !important;
+}
