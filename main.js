@@ -1,8 +1,9 @@
+// Counter
 class Counter extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            count: 3
+            count: 0
         }
         this.increment = this.increment.bind(this)
         this.decrement = this.decrement.bind(this)
@@ -14,7 +15,9 @@ class Counter extends React.Component {
     }
 
     decrement() {
-        this.setState(function (state) { return { count: state.count - 1 } })
+        if (this.state.count > 0) {
+            this.setState(function (state) { return { count: state.count - 1 } })
+        }
     }
 
     reset() {
@@ -22,12 +25,12 @@ class Counter extends React.Component {
     }
     render() {
         return <div>
-            <button onClick={this.increment}>+</button>
-            <button onClick={this.decrement}>-</button>
-            <button onClick={this.reset}>Reset</button>
+            <button className="btn btn-primary" onClick={this.increment}>+</button>
+            <button className="btn btn-primary" onClick={this.decrement}>-</button>
+            <button className="btn btn-danger" onClick={this.reset}>Reset</button>
             <h1> Number of items: {this.state.count} </h1>
         </div>
     }
 }
 
-ReactDOM.render(<Counter />, document.getElementById('react-node'))
+ReactDOM.render(<Counter />, document.getElementById('counter'))

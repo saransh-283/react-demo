@@ -1,0 +1,11 @@
+body {
+    background: rgb(255, 249, 242);
+}
+
+.container {
+    background: white;
+}
+
+.btn {
+    margin-right: 10px;
+}
